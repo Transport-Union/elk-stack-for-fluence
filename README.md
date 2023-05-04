@@ -1,3 +1,5 @@
+Hi, i deployed this to filter and view the logs of the Fleunce i am running on my home server. 
+
 Based on https://github.com/deviantony/docker-elk/tree/main
 
 You need to change passwords following instructions below.
