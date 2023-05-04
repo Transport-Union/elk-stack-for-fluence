@@ -6,7 +6,7 @@ You need to change passwords following instructions below.
 
 harvesting happens with filebeat/filebeat.docker.yml. Its set to all your running containers. Containerinfo is sent along so you can filter at a later stage. 
 
-Filtering happens with logstash/pipeline/logstash.conf
+Filtering happens with logstash/pipeline/logstash.conf. Make sure you change the name of the docker container running Fluence!
 
 I run ssh -L 5601:127.0.0.1 <myServer> to view the logs in browser. Elastic -> Analytics -> Discover. Select the logs-* index. 
 
