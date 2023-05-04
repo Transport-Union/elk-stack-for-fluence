@@ -1,0 +1,19 @@
+filebeat.inputs:
+- type: container
+  paths: 
+    - "/var/lib/docker/containers/*/*.log"
+  processors:
+    - add_docker_metadata: ~
+    # - decode_json_fields:
+    #     fields: ["log"]
+    #     target: "jslog"
+    #     max_depth: 4
+    #     process_array: true
+    #     add_error_key: true
+output:
+  logstash:
+    hosts: ["elk_logstash_1:5044"]
+filebeat.logging:
+  files:
+    rotateeverybytes: 10485760 # = 10MB
+
